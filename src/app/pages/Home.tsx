@@ -29,7 +29,7 @@ const Home = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Toiture, couverture & étanchéité
               <br />
-              <span className="text-[#FF6B00]">Gironde & Charente-Maritime</span>
+              <span className="text-[#FF6B00]">Sud-Ouest</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Rénovation, réparation, zinguerie, accès difficiles, recherche de fuite, terrasses, patrimoine, et bien plus encore. 
