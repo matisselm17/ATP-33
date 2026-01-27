@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { services, ServiceCategory, getServicesByCategory } from '../../data/servicesData'
-import { getServiceImage, handleImageError } from '../../utils/imageUtils'
+import { getServiceImage, handleImageError, getCategoryPlaceholder } from '../../utils/imageUtils'
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | 'Tous'>('Tous')
@@ -59,17 +59,24 @@ const Services = () => {
             {filteredServices.map((service) => (
               <Link
                 key={service.id}
-                to={`/services/${service.slug}`}
+                to={`/services/${service.slug}#ce-que-nous-faisons`}
                 className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-[#FF6B00] hover:shadow-lg transition-all duration-200 group h-full flex flex-col"
               >
                 <div className="relative aspect-video overflow-hidden bg-gray-200">
                   <img
                     src={getServiceImage(service.folderName)}
                     alt={service.title}
-                    onError={handleImageError}
+                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                      const target = e.target as HTMLImageElement
+                      // Utiliser un placeholder de catégorie comme fallback
+                      target.src = getCategoryPlaceholder(service.folderName)
+                      target.onerror = () => handleImageError(e)
+                    }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
-                  <span className="absolute top-3 left-3 inline-block bg-[#FF6B00] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="absolute top-3 left-3 inline-block bg-[#FF6B00] text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
                     {service.category}
                   </span>
                 </div>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { services } from '../../data/servicesData'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Phone } from 'lucide-react'
-import { getServiceImage, handleImageError } from '../../utils/imageUtils'
+import { getServiceImage, handleImageError, getRealisationsImage } from '../../utils/imageUtils'
 
 const Realisations = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('Tous')
@@ -60,9 +60,17 @@ const Realisations = () => {
                   <img
                     src={getServiceImage(service.folderName)}
                     alt={service.title}
-                    onError={handleImageError}
+                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                      const target = e.target as HTMLImageElement
+                      // Essayer d'utiliser une image de réalisation comme fallback
+                      const index = filteredServices.indexOf(service)
+                      target.src = getRealisationsImage(index)
+                      target.onerror = () => handleImageError(e)
+                    }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-6">
                   <span className="inline-block bg-[#F9FAFB] text-[#FF6B00] text-xs font-semibold px-3 py-1 rounded-full mb-3">

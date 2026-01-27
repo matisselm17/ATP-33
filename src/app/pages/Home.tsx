@@ -1,16 +1,30 @@
 import { Link } from 'react-router-dom'
-import { Check, Phone, ArrowRight, MapPin, Shield, Award, Clock, Users } from 'lucide-react'
+import { Phone, ArrowRight, MapPin, Shield, Award, Clock, Users } from 'lucide-react'
 import { getFeaturedServices } from '../../data/servicesData'
-import { getServiceImage, handleImageError } from '../../utils/imageUtils'
+import { getServiceImage, handleImageError, getHeroImage } from '../../utils/imageUtils'
 
 const Home = () => {
   const featuredServices = getFeaturedServices()
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#111827] via-[#1F2937] to-[#111827] text-white py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section avec image */}
+      <section className="relative bg-gradient-to-br from-[#111827] via-[#1F2937] to-[#111827] text-white py-20 lg:py-32 overflow-hidden">
+        {/* Image de fond */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={getHeroImage()}
+            alt="Toiture professionnelle"
+            className="w-full h-full object-cover opacity-30"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement
+              target.style.display = 'none'
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#111827]/90 via-[#1F2937]/80 to-[#111827]/90"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Toiture, couverture & étanchéité
@@ -24,7 +38,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-[#FF6B00] text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-[#E55A00] transition-all duration-200 inline-flex items-center justify-center"
+                className="bg-[#FF6B00] text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-[#E55A00] transition-all duration-200 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Demande de devis gratuit
                 <ArrowRight className="ml-2" size={20} />
@@ -99,7 +113,7 @@ const Home = () => {
             {featuredServices.map((service) => (
               <Link
                 key={service.id}
-                to={`/services/${service.slug}`}
+                to={`/services/${service.slug}#ce-que-nous-faisons`}
                 className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-[#FF6B00] hover:shadow-lg transition-all duration-200 group"
               >
                 <div className="relative aspect-video overflow-hidden bg-gray-200">
