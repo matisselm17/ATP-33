@@ -11,7 +11,7 @@ const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-4">À propos</h3>
             <p className="text-sm leading-relaxed">
               Spécialiste du bâtiment depuis de nombreuses années, nous réalisons vos projets d'étanchéité, 
-              couverture, bardage et zinguerie avec professionnalisme et qualité.
+              couverture et zinguerie avec professionnalisme et qualité.
             </p>
           </div>
 
@@ -64,11 +64,6 @@ const Footer = () => {
               <li>
                 <Link to="/services" className="text-sm hover:text-[#FF6B00] transition-colors duration-200">
                   Bac acier
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-sm hover:text-[#FF6B00] transition-colors duration-200">
-                  Bardage
                 </Link>
               </li>
               <li>
