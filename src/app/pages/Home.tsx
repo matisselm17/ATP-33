@@ -44,10 +44,10 @@ const Home = () => {
                 <ArrowRight className="ml-2" size={20} />
               </Link>
               <Link
-                to="/realisations"
+                to="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-white hover:text-[#111827] transition-all duration-200 inline-flex items-center justify-center"
               >
-                Voir nos réalisations
+                Voir nos services
               </Link>
             </div>
           </div>
