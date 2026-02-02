@@ -15,13 +15,13 @@ const Home = () => {
           <img
             src={getHeroImage()}
             alt="Toiture professionnelle"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-50"
             onError={(e) => {
               const target = e.target as HTMLImageElement
               target.style.display = 'none'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#111827]/90 via-[#1F2937]/80 to-[#111827]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#111827]/85 via-[#1F2937]/75 to-[#111827]/85"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -49,50 +49,6 @@ const Home = () => {
               >
                 Voir nos services
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pourquoi nous choisir ? */}
-      <section className="bg-[#F9FAFB] py-20 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
-              Pourquoi nous choisir ?
-            </h2>
-            <p className="text-lg text-gray-600">
-              Des valeurs fortes pour votre satisfaction
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="text-white" size={40} />
-              </div>
-              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Expertise reconnue</h3>
-              <p className="text-gray-600">Plus de 20 ans d'expérience dans le secteur du bâtiment</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="text-white" size={40} />
-              </div>
-              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Qualité certifiée</h3>
-              <p className="text-gray-600">Certifications et garanties décennale pour tous nos travaux</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="text-white" size={40} />
-              </div>
-              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Réactivité</h3>
-              <p className="text-gray-600">Intervention rapide et respect des délais</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="text-white" size={40} />
-              </div>
-              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Équipe qualifiée</h3>
-              <p className="text-gray-600">Personnel formé et régulièrement encadré</p>
             </div>
           </div>
         </div>
@@ -143,6 +99,155 @@ const Home = () => {
               className="btn-secondary inline-flex items-center"
             >
               Voir tous nos services
+              <ArrowRight className="ml-2" size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Pourquoi nous choisir ? */}
+      <section className="bg-[#F9FAFB] py-20 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
+              Pourquoi nous choisir ?
+            </h2>
+            <p className="text-lg text-gray-600">
+              Des valeurs fortes pour votre satisfaction
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="text-white" size={40} />
+              </div>
+              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Expertise reconnue</h3>
+              <p className="text-gray-600">Depuis 2017, plus de 150 chantiers par an et plus de 100 clients satisfaits</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="text-white" size={40} />
+              </div>
+              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Qualité certifiée</h3>
+              <p className="text-gray-600">Certifications et garanties décennale pour tous nos travaux</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="text-white" size={40} />
+              </div>
+              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Réactivité</h3>
+              <p className="text-gray-600">Intervention rapide et respect des délais</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="text-white" size={40} />
+              </div>
+              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Équipe qualifiée</h3>
+              <p className="text-gray-600">Personnel formé et régulièrement encadré</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Réalisations teaser */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
+              Nos réalisations
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+              Découvrez quelques-unes de nos réalisations en toiture, couverture et étanchéité
+            </p>
+          </div>
+          
+          {/* Blocs de réalisations */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* Réalisation 1 */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-[#FF6B00] hover:shadow-lg transition-all duration-200 group">
+              <div className="relative aspect-video overflow-hidden bg-gray-200">
+                <img
+                  src="/réalistation/Réa 1.2.JPG"
+                  alt="Couverture spéciale pour mairie"
+                  onError={handleImageError}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-[#111827] mb-2 group-hover:text-[#FF6B00] transition-colors">
+                  Couverture spéciale pour mairie
+                </h3>
+                <p className="text-gray-600 mb-1">
+                  <span className="font-medium text-[#111827]">Client :</span> Mairie
+                </p>
+                <p className="text-gray-600 mb-3">
+                  <span className="font-medium text-[#111827]">Surface :</span> 190 m²
+                </p>
+                <p className="text-sm text-gray-500">
+                  Projet de couverture sur mesure pour bâtiment municipal
+                </p>
+              </div>
+            </div>
+
+            {/* Réalisation 2 */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-[#FF6B00] hover:shadow-lg transition-all duration-200 group">
+              <div className="relative aspect-video overflow-hidden bg-gray-200">
+                <img
+                  src="/réalistation/réa 2.JPG"
+                  alt="Couverture panneau sandwich"
+                  onError={handleImageError}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-[#111827] mb-2 group-hover:text-[#FF6B00] transition-colors">
+                  Couverture panneau sandwich
+                </h3>
+                <p className="text-gray-600 mb-1">
+                  <span className="font-medium text-[#111827]">Client :</span> Entreprise d'aéronautique
+                </p>
+                <p className="text-gray-600 mb-3">
+                  <span className="font-medium text-[#111827]">Surface :</span> 2800 m²
+                </p>
+                <p className="text-sm text-gray-500">
+                  Installation de panneaux sandwich pour toiture industrielle
+                </p>
+              </div>
+            </div>
+
+            {/* Réalisation 3 */}
+            <div className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-[#FF6B00] hover:shadow-lg transition-all duration-200 group">
+              <div className="relative aspect-video overflow-hidden bg-gray-200">
+                <img
+                  src="/réalistation/réa 3.JPG"
+                  alt="Réfection d'étanchéité entreprise défense"
+                  onError={handleImageError}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-[#111827] mb-2 group-hover:text-[#FF6B00] transition-colors">
+                  Réfection d'étanchéité
+                </h3>
+                <p className="text-gray-600 mb-1">
+                  <span className="font-medium text-[#111827]">Client :</span> Entreprise dans la défense
+                </p>
+                <p className="text-gray-600 mb-3">
+                  <span className="font-medium text-[#111827]">Surface :</span> 1800 m²
+                </p>
+                <p className="text-sm text-gray-500">
+                  Réfection complète de l'étanchéité pour site industriel
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link
+              to="/realisations"
+              className="btn-primary inline-flex items-center"
+            >
+              Voir toutes nos réalisations
               <ArrowRight className="ml-2" size={20} />
             </Link>
           </div>
@@ -201,27 +306,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Réalisations teaser */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
-              Nos réalisations
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              Découvrez quelques-unes de nos réalisations en toiture, couverture et étanchéité
-            </p>
-            <Link
-              to="/realisations"
-              className="btn-primary inline-flex items-center"
-            >
-              Voir toutes nos réalisations
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Zones d'intervention */}
       <section className="bg-[#F9FAFB] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,7 +348,7 @@ const Home = () => {
               Demande de devis gratuit
             </Link>
             <a
-              href="tel:+33000000000"
+              href="tel:+33557803774"
               className="border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-white hover:text-[#FF6B00] transition-all duration-200 inline-flex items-center justify-center"
             >
               <Phone className="mr-2" size={20} />

@@ -48,12 +48,12 @@ const Header = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="tel:+33000000000"
+              href="tel:+33557803774"
               className="flex items-center space-x-2 text-[#111827] hover:text-[#FF6B00] transition-colors duration-200 font-medium"
-              title="Appeler [TÉLÉPHONE]"
+              title="Appeler 05 57 80 37 74"
             >
               <Phone size={20} />
-              <span>Téléphone</span>
+              <span>05 57 80 37 74</span>
             </a>
             <Link
               to="/contact"
@@ -92,13 +92,13 @@ const Header = () => {
             ))}
             <div className="pt-4 space-y-3 border-t border-gray-200">
               <a
-                href="tel:+33000000000"
+                href="tel:+33557803774"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center space-x-2 text-[#111827] hover:text-[#FF6B00] transition-colors duration-200 font-medium"
-                title="Appeler [TÉLÉPHONE]"
+                title="Appeler 05 57 80 37 74"
               >
                 <Phone size={20} />
-                <span>Téléphone</span>
+                <span>05 57 80 37 74</span>
               </a>
               <Link
                 to="/contact"

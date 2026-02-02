@@ -10,8 +10,8 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">À propos</h3>
             <p className="text-sm leading-relaxed">
-              Spécialiste du bâtiment depuis de nombreuses années, nous réalisons vos projets d'étanchéité, 
-              couverture et zinguerie avec professionnalisme et qualité.
+              Spécialiste du bâtiment depuis 2017, nous réalisons vos projets d'étanchéité, 
+              couverture et zinguerie avec professionnalisme et qualité. Plus de 150 chantiers par an et plus de 100 clients satisfaits.
             </p>
           </div>
 
@@ -80,11 +80,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+33000000000"
+                  href="tel:+33557803774"
                   className="flex items-center space-x-2 text-sm hover:text-[#FF6B00] transition-colors duration-200"
                 >
                   <Phone size={16} />
-                  <span>À compléter</span>
+                  <span>05 57 80 37 74</span>
                 </a>
               </li>
               <li>
@@ -93,14 +93,17 @@ const Footer = () => {
                   className="flex items-center space-x-2 text-sm hover:text-[#FF6B00] transition-colors duration-200"
                 >
                   <Mail size={16} />
-                  <span>À compléter</span>
+                  <span>contact@atp33.fr</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start space-x-2 text-sm">
                   <MapPin size={16} className="mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="mb-1">Zones d'intervention :</p>
+                    <p className="mb-1">Adresse :</p>
+                    <p className="text-xs">185 rue Gay Lussac</p>
+                    <p className="text-xs">33127 Saint-Jean-d'Illac</p>
+                    <p className="mt-2 mb-1">Zones d'intervention :</p>
                     <p className="text-xs">Gironde</p>
                     <p className="text-xs">Charente-Maritime</p>
                     <p className="text-xs">Haute-Garonne</p>
@@ -111,8 +114,23 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-[#1F2937] text-center text-sm text-gray-400">
-          <p>&copy; 2024 BTP Expertise - Tous droits réservés</p>
+        <div className="mt-12 pt-8 border-t border-[#1F2937]">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-sm text-gray-400 text-center md:text-left">
+              &copy; 2024 ATP33 - Tous droits réservés | Créé en 2017
+            </p>
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
+              <Link to="/mentions-legales" className="text-gray-400 hover:text-[#FF6B00] transition-colors duration-200">
+                Mentions légales
+              </Link>
+              <Link to="/politique-confidentialite" className="text-gray-400 hover:text-[#FF6B00] transition-colors duration-200">
+                Politique de confidentialité
+              </Link>
+              <Link to="/conditions-utilisation" className="text-gray-400 hover:text-[#FF6B00] transition-colors duration-200">
+                Conditions d'utilisation
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
