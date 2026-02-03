@@ -4,8 +4,8 @@
 
 // Image hero pour la page d'accueil
 export const getHeroImage = (): string => {
-  // Utilise l'image d'accès difficile comme hero
-  return '/accsdifficile/IMG_9552.jpeg'
+  // Utilise l'image de réalisation comme hero
+  return '/réalistation/Réa 1.2.JPG'
 }
 
 // Mapping des catégories vers des images placeholder thématiques (Unsplash)

@@ -1,16 +1,24 @@
 import { Link } from 'react-router-dom'
 import { Phone } from 'lucide-react'
 import { handleImageError } from '../../utils/imageUtils'
+import SEO from '../components/SEO'
+import { generateTitle, generateDescription, generateKeywords } from '../../utils/seoUtils'
 
 const Realisations = () => {
   return (
     <div className="bg-white">
+      <SEO
+        title={generateTitle(undefined, 'realisations')}
+        description={generateDescription(undefined, 'realisations')}
+        keywords={generateKeywords(undefined, 'realisations')}
+        canonical="https://www.atp33.fr/realisations"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#111827] via-[#1F2937] to-[#111827] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Nos réalisations</h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Découvrez quelques-unes de nos réalisations en toiture, couverture et étanchéité dans le Sud-Ouest
+            Quelques exemples de nos réalisations récentes en toiture, couverture et étanchéité en Gironde, Charente-Maritime et Sud-Ouest. Nous avons réalisé plus de 150 chantiers depuis 2017 pour mairies, entreprises d'aéronautique, sites industriels et patrimoine.
           </p>
         </div>
       </section>
@@ -24,7 +32,7 @@ const Realisations = () => {
               <div className="relative aspect-video overflow-hidden bg-gray-200">
                 <img
                   src="/réalistation/Réa 1.2.JPG"
-                  alt="Couverture spéciale pour mairie"
+                  alt="Réalisation couverture mairie 190 m² - Projet toiture Gironde - Aquitaine Toitures Professionnelles"
                   onError={handleImageError}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -50,7 +58,7 @@ const Realisations = () => {
               <div className="relative aspect-video overflow-hidden bg-gray-200">
                 <img
                   src="/réalistation/réa 2.JPG"
-                  alt="Couverture panneau sandwich"
+                  alt="Réalisation couverture panneau sandwich entreprise aéronautique 2800 m² - Projet industriel Gironde"
                   onError={handleImageError}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -76,7 +84,7 @@ const Realisations = () => {
               <div className="relative aspect-video overflow-hidden bg-gray-200">
                 <img
                   src="/réalistation/réa 3.JPG"
-                  alt="Réfection d'étanchéité entreprise défense"
+                  alt="Réfection étanchéité entreprise défense 1800 m² - Projet étanchéité toiture plate Gironde"
                   onError={handleImageError}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />

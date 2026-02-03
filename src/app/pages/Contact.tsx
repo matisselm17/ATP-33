@@ -1,6 +1,8 @@
 import { useState, FormEvent } from 'react'
 import { Phone, Mail, MapPin, CheckCircle, AlertCircle } from 'lucide-react'
 import { services } from '../../data/servicesData'
+import SEO from '../components/SEO'
+import { generateTitle, generateDescription, generateKeywords } from '../../utils/seoUtils'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -95,6 +97,12 @@ const Contact = () => {
 
   return (
     <div className="bg-white">
+      <SEO
+        title={generateTitle(undefined, 'contact')}
+        description={generateDescription(undefined, 'contact')}
+        keywords={generateKeywords(undefined, 'contact')}
+        canonical="https://www.atp33.fr/contact"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#111827] via-[#1F2937] to-[#111827] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

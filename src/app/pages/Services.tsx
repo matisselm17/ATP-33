@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { services, ServiceCategory, getServicesByCategory } from '../../data/servicesData'
 import { getServiceImage, handleImageError, getCategoryPlaceholder } from '../../utils/imageUtils'
+import SEO from '../components/SEO'
+import { generateTitle, generateDescription, generateKeywords } from '../../utils/seoUtils'
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | 'Tous'>('Tous')
@@ -21,12 +23,18 @@ const Services = () => {
 
   return (
     <div className="bg-white">
+      <SEO
+        title={generateTitle(undefined, 'services')}
+        description={generateDescription(undefined, 'services')}
+        keywords={generateKeywords(undefined, 'services')}
+        canonical="https://www.atp33.fr/services"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-[#111827] via-[#1F2937] to-[#111827] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Nos services</h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Expertise complète en toiture, couverture, étanchéité et zinguerie pour tous vos projets
+            Expertise complète en toiture, couverture, étanchéité et zinguerie pour tous vos projets en Gironde, Charente-Maritime, Haute-Garonne et Sud-Ouest. Devis gratuit sous 48h.
           </p>
         </div>
       </section>
@@ -65,7 +73,7 @@ const Services = () => {
                 <div className="relative aspect-video overflow-hidden bg-gray-200">
                   <img
                     src={getServiceImage(service.folderName)}
-                    alt={service.title}
+                    alt={`${service.title} - ${service.category} Gironde Sud-Ouest - Devis gratuit`}
                     onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
                       const target = e.target as HTMLImageElement
                       // Utiliser un placeholder de catégorie comme fallback

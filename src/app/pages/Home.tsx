@@ -2,26 +2,35 @@ import { Link } from 'react-router-dom'
 import { Phone, ArrowRight, MapPin, Shield, Award, Clock, Users } from 'lucide-react'
 import { getFeaturedServices } from '../../data/servicesData'
 import { getServiceImage, handleImageError, getHeroImage } from '../../utils/imageUtils'
+import SEO from '../components/SEO'
+import { generateTitle, generateDescription, generateKeywords, getLocalBusinessSchema } from '../../utils/seoUtils'
 
 const Home = () => {
   const featuredServices = getFeaturedServices()
 
   return (
     <div className="bg-white">
+      <SEO
+        title={generateTitle(undefined, 'home')}
+        description={generateDescription(undefined, 'home')}
+        keywords={generateKeywords(undefined, 'home')}
+        canonical="https://www.atp33.fr/"
+        schema={getLocalBusinessSchema()}
+      />
       {/* Hero Section avec image */}
       <section className="relative bg-gradient-to-br from-[#111827] via-[#1F2937] to-[#111827] text-white py-20 lg:py-32 overflow-hidden">
         {/* Image de fond */}
         <div className="absolute inset-0 z-0">
           <img
             src={getHeroImage()}
-            alt="Toiture professionnelle"
+            alt="Réalisation couverture mairie - Aquitaine Toitures Professionnelles Gironde"
             className="w-full h-full object-cover opacity-50"
             onError={(e) => {
               const target = e.target as HTMLImageElement
               target.style.display = 'none'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#111827]/85 via-[#1F2937]/75 to-[#111827]/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#111827]/60 via-[#1F2937]/50 to-[#111827]/60"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -32,8 +41,7 @@ const Home = () => {
               <span className="text-[#FF6B00]">Sud-Ouest</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Rénovation, réparation, zinguerie, accès difficiles, recherche de fuite, terrasses, patrimoine, et bien plus encore. 
-              Expertise professionnelle pour tous vos projets de toiture et étanchéité dans le Sud-Ouest.
+              Expert couvreur professionnel pour tous vos projets de toiture, couverture et étanchéité dans le Sud-Ouest.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -62,7 +70,7 @@ const Home = () => {
               Nos services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Des solutions complètes pour tous vos besoins en toiture, couverture et étanchéité
+              Des solutions complètes pour tous vos besoins en toiture, couverture et étanchéité en Gironde, Charente-Maritime, Haute-Garonne et Sud-Ouest. Expert couvreur professionnel depuis 2017.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -73,10 +81,10 @@ const Home = () => {
                 className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-[#FF6B00] hover:shadow-lg transition-all duration-200 group"
               >
                 <div className="relative aspect-video overflow-hidden bg-gray-200">
-                  <img
-                    src={getServiceImage(service.folderName)}
-                    alt={service.title}
-                    onError={handleImageError}
+                <img
+                  src={getServiceImage(service.folderName)}
+                  alt={`${service.title} - ${service.category} Gironde Sud-Ouest - Aquitaine Toitures Professionnelles`}
+                  onError={handleImageError}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -99,20 +107,19 @@ const Home = () => {
               className="btn-secondary inline-flex items-center"
             >
               Voir tous nos services
-              <ArrowRight className="ml-2" size={20} />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Pourquoi nous choisir ? */}
-      <section className="bg-[#F9FAFB] py-20 border-b border-gray-200">
+      <section className="bg-[#111827] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Pourquoi nous choisir ?
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-300">
               Des valeurs fortes pour votre satisfaction
             </p>
           </div>
@@ -121,29 +128,29 @@ const Home = () => {
               <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="text-white" size={40} />
               </div>
-              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Expertise reconnue</h3>
-              <p className="text-gray-600">Depuis 2017, plus de 150 chantiers par an et plus de 100 clients satisfaits</p>
+              <h3 className="font-semibold text-white mb-3 text-lg">Expertise reconnue</h3>
+              <p className="text-gray-300">Depuis 2017, plus de 150 chantiers par an et plus de 100 clients satisfaits</p>
             </div>
             <div className="text-center">
               <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="text-white" size={40} />
               </div>
-              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Qualité certifiée</h3>
-              <p className="text-gray-600">Certifications et garanties décennale pour tous nos travaux</p>
+              <h3 className="font-semibold text-white mb-3 text-lg">Qualité certifiée</h3>
+              <p className="text-gray-300">Certifications et garanties décennale pour tous nos travaux</p>
             </div>
             <div className="text-center">
               <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="text-white" size={40} />
               </div>
-              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Réactivité</h3>
-              <p className="text-gray-600">Intervention rapide et respect des délais</p>
+              <h3 className="font-semibold text-white mb-3 text-lg">Réactivité</h3>
+              <p className="text-gray-300">Intervention rapide et respect des délais</p>
             </div>
             <div className="text-center">
               <div className="bg-[#FF6B00] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="text-white" size={40} />
               </div>
-              <h3 className="font-semibold text-[#111827] mb-3 text-lg">Équipe qualifiée</h3>
-              <p className="text-gray-600">Personnel formé et régulièrement encadré</p>
+              <h3 className="font-semibold text-white mb-3 text-lg">Équipe qualifiée</h3>
+              <p className="text-gray-300">Personnel formé et régulièrement encadré</p>
             </div>
           </div>
         </div>
@@ -157,7 +164,7 @@ const Home = () => {
               Nos réalisations
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              Découvrez quelques-unes de nos réalisations en toiture, couverture et étanchéité
+              Quelques exemples de nos réalisations récentes en toiture, couverture et étanchéité en Gironde et Sud-Ouest. Nous avons réalisé plus de 150 chantiers depuis 2017 pour mairies, entreprises et particuliers.
             </p>
           </div>
           
@@ -168,7 +175,7 @@ const Home = () => {
               <div className="relative aspect-video overflow-hidden bg-gray-200">
                 <img
                   src="/réalistation/Réa 1.2.JPG"
-                  alt="Couverture spéciale pour mairie"
+                  alt="Réalisation couverture mairie 190 m² - Projet toiture Gironde - Aquitaine Toitures Professionnelles"
                   onError={handleImageError}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -184,7 +191,7 @@ const Home = () => {
                   <span className="font-medium text-[#111827]">Surface :</span> 190 m²
                 </p>
                 <p className="text-sm text-gray-500">
-                  Projet de couverture sur mesure pour bâtiment municipal
+                  Projet de couverture sur mesure pour bâtiment municipal en Gironde. <Link to="/services/couverture" className="text-[#FF6B00] hover:underline">Découvrez nos services de couverture</Link>.
                 </p>
               </div>
             </div>
@@ -194,7 +201,7 @@ const Home = () => {
               <div className="relative aspect-video overflow-hidden bg-gray-200">
                 <img
                   src="/réalistation/réa 2.JPG"
-                  alt="Couverture panneau sandwich"
+                  alt="Réalisation couverture panneau sandwich entreprise aéronautique 2800 m² - Projet industriel Gironde"
                   onError={handleImageError}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -210,7 +217,7 @@ const Home = () => {
                   <span className="font-medium text-[#111827]">Surface :</span> 2800 m²
                 </p>
                 <p className="text-sm text-gray-500">
-                  Installation de panneaux sandwich pour toiture industrielle
+                  Installation de panneaux sandwich pour toiture industrielle. <Link to="/services/couverture" className="text-[#FF6B00] hover:underline">Expert en couverture industrielle</Link>.
                 </p>
               </div>
             </div>
@@ -220,7 +227,7 @@ const Home = () => {
               <div className="relative aspect-video overflow-hidden bg-gray-200">
                 <img
                   src="/réalistation/réa 3.JPG"
-                  alt="Réfection d'étanchéité entreprise défense"
+                  alt="Réfection étanchéité entreprise défense 1800 m² - Projet étanchéité toiture plate Gironde"
                   onError={handleImageError}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -236,7 +243,7 @@ const Home = () => {
                   <span className="font-medium text-[#111827]">Surface :</span> 1800 m²
                 </p>
                 <p className="text-sm text-gray-500">
-                  Réfection complète de l'étanchéité pour site industriel
+                  Réfection complète de l'étanchéité pour site industriel. <Link to="/services/etancheite-terrasses-accessibles" className="text-[#FF6B00] hover:underline">Découvrez nos services d'étanchéité</Link>.
                 </p>
               </div>
             </div>
@@ -248,20 +255,19 @@ const Home = () => {
               className="btn-primary inline-flex items-center"
             >
               Voir toutes nos réalisations
-              <ArrowRight className="ml-2" size={20} />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="bg-[#F9FAFB] py-20">
+      <section className="bg-[#111827] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Notre processus
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-300">
               De la demande à la fin des travaux, un accompagnement professionnel
             </p>
           </div>
@@ -270,8 +276,8 @@ const Home = () => {
               <div className="bg-[#FF6B00] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 1
               </div>
-              <h3 className="font-semibold text-[#111827] mb-2 text-lg">Diagnostic</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="font-semibold text-white mb-2 text-lg">Diagnostic</h3>
+              <p className="text-gray-300 text-sm">
                 Visite sur site et analyse complète de votre projet
               </p>
             </div>
@@ -279,8 +285,8 @@ const Home = () => {
               <div className="bg-[#FF6B00] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 2
               </div>
-              <h3 className="font-semibold text-[#111827] mb-2 text-lg">Devis</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="font-semibold text-white mb-2 text-lg">Devis</h3>
+              <p className="text-gray-300 text-sm">
                 Devis détaillé et transparent sous 48h
               </p>
             </div>
@@ -288,8 +294,8 @@ const Home = () => {
               <div className="bg-[#FF6B00] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 3
               </div>
-              <h3 className="font-semibold text-[#111827] mb-2 text-lg">Intervention</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="font-semibold text-white mb-2 text-lg">Intervention</h3>
+              <p className="text-gray-300 text-sm">
                 Réalisation soignée par nos équipes qualifiées
               </p>
             </div>
@@ -297,8 +303,8 @@ const Home = () => {
               <div className="bg-[#FF6B00] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 4
               </div>
-              <h3 className="font-semibold text-[#111827] mb-2 text-lg">Contrôle & conseils</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="font-semibold text-white mb-2 text-lg">Contrôle & conseils</h3>
+              <p className="text-gray-300 text-sm">
                 Vérification finale et conseils d'entretien
               </p>
             </div>

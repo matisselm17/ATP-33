@@ -3,6 +3,8 @@ import { ArrowLeft, Phone, Check, ChevronDown, ChevronUp } from 'lucide-react'
 import { getServiceBySlug } from '../../data/servicesData'
 import { useState } from 'react'
 import { getServiceImage, handleImageError, getCategoryPlaceholder } from '../../utils/imageUtils'
+import SEO from '../components/SEO'
+import { generateTitle, generateDescription, generateKeywords, getServiceSchema } from '../../utils/seoUtils'
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -24,13 +26,20 @@ const ServiceDetail = () => {
 
   return (
     <div className="bg-white">
+      <SEO
+        title={generateTitle(service)}
+        description={generateDescription(service)}
+        keywords={generateKeywords(service)}
+        canonical={`https://www.atp33.fr/services/${service.slug}`}
+        schema={getServiceSchema(service)}
+      />
       {/* Hero avec image */}
       <section className="relative bg-gradient-to-br from-[#111827] via-[#1F2937] to-[#111827] text-white py-20 lg:py-24 overflow-hidden">
         {/* Image de fond */}
         <div className="absolute inset-0 z-0">
           <img
             src={getServiceImage(service.folderName)}
-            alt={service.title}
+            alt={`${service.title} - ${service.category} Gironde Sud-Ouest - Aquitaine Toitures Professionnelles`}
             className="w-full h-full object-cover opacity-25"
             onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
               const target = e.target as HTMLImageElement
@@ -67,7 +76,7 @@ const ServiceDetail = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">Ce que nous faisons</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Des solutions professionnelles adaptées à vos besoins spécifiques
+              Des solutions professionnelles adaptées à vos besoins spécifiques en Gironde, Charente-Maritime, Haute-Garonne et Sud-Ouest. Expert {service.category.toLowerCase()} depuis 2017.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -172,7 +181,7 @@ const ServiceDetail = () => {
               Demande de devis gratuit
             </Link>
             <a
-              href="tel:+33000000000"
+              href="tel:+33557803774"
               className="border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-white hover:text-[#FF6B00] transition-all duration-200 inline-flex items-center justify-center"
             >
               <Phone className="mr-2" size={20} />
@@ -186,7 +195,7 @@ const ServiceDetail = () => {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg p-4 z-50">
         <div className="flex gap-3 max-w-7xl mx-auto">
           <a
-            href="tel:+33000000000"
+            href="tel:+33557803774"
             className="flex-1 bg-[#FF6B00] text-white px-4 py-3 rounded-md font-semibold text-center hover:bg-[#E55A00] transition-colors inline-flex items-center justify-center"
           >
             <Phone className="mr-2" size={20} />
