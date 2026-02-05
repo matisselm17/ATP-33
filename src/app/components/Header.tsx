@@ -20,9 +20,12 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-1">
-            <span className="text-xl md:text-2xl font-bold text-[#FF6B00]">Aquitaine Toitures</span>
-            <span className="text-xl md:text-2xl font-bold text-[#111827]">Professionnelles</span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="Aquitaine Toitures Professionnelles" 
+              className="h-12 md:h-16 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

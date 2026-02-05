@@ -36,12 +36,12 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Toiture, couverture & étanchéité
-              <br />
-              <span className="text-[#FF6B00]">Sud-Ouest</span>
+              Couverture, étanchéité & services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Expert couvreur professionnel pour tous vos projets de toiture, couverture et étanchéité dans le Sud-Ouest.
+              Votre toiture, notre responsabilité.
+              <br />
+              Travaux de couverture et d'étanchéité réalisés avec exigence et durabilité. Intervention dans le sud ouest.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
