@@ -80,7 +80,7 @@ const ServiceDetail = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {service.whatWeDo.map((item, index) => (
+              {service.whatWeDo.map((item, index) => (
               <div
                 key={index}
                 className="bg-gradient-to-br from-white to-[#F9FAFB] border border-gray-200 rounded-xl p-6 hover:border-[#FF6B00] hover:shadow-lg transition-all duration-300 group"
@@ -95,8 +95,8 @@ const ServiceDetail = () => {
                     <p className="text-gray-700 text-lg leading-relaxed">{item}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+                </div>
+              ))}
           </div>
         </div>
       </section>

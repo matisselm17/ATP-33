@@ -81,18 +81,18 @@ const Realisations = () => {
 
             {/* Réalisation 3 */}
             <div className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-[#FF6B00] hover:shadow-lg transition-all duration-200 group">
-              <div className="relative aspect-video overflow-hidden bg-gray-200">
-                <img
+                <div className="relative aspect-video overflow-hidden bg-gray-200">
+                  <img
                   src="/réalistation/réa 3.JPG"
                   alt="Réfection étanchéité entreprise défense 1800 m² - Projet étanchéité toiture plate Gironde"
-                  onError={handleImageError}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#111827] mb-2 group-hover:text-[#FF6B00] transition-colors">
+                    onError={handleImageError}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-[#111827] mb-2 group-hover:text-[#FF6B00] transition-colors">
                   Réfection d'étanchéité
-                </h3>
+                  </h3>
                 <p className="text-gray-600 mb-1">
                   <span className="font-medium text-[#111827]">Client :</span> Entreprise dans la défense
                 </p>
@@ -103,7 +103,7 @@ const Realisations = () => {
                   Réfection complète de l'étanchéité pour site industriel
                 </p>
               </div>
-            </div>
+                </div>
           </div>
         </div>
       </section>
