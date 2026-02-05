@@ -33,7 +33,7 @@ export const getServiceImage = (folderName: string): string => {
     'recherchedefuite': '/recherchedefuite/atypix-soprema-entreprises-soprassistance-vannes-08-web-1024x683.jpg',
     'rparationetreprisedtanchit': '/rparationetreprisedtanchit/IMG_9552.jpeg',
     'scurisationdetoiture': '/scurisationdetoiture/Saut de loup 5.jpeg',
-    'tanchitterrassesaccessibles': '/tanchitterrassesaccessibles/PHOTO-2026-02-05-16-34-51.jpg',
+    'tanchitterrassesaccessibles': '/tanchitterrassesaccessibles/B79568AB-5FF3-4523-89DC-B3EF19257C66.jpeg',
     'travauxspciaux': '/travauxspciaux/IMG_1130.jpeg',
     'zinguerie': '/zinguerie/664e153f5b98aad1d0fb319f_Couloir et Noue en Zinc.jpeg',
   }
