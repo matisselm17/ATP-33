@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Phone, ArrowRight, MapPin, Shield, Award, Clock, Users } from 'lucide-react'
-import { getFeaturedServices } from '../../data/servicesData'
+import { getServicesInOrder } from '../../data/servicesData'
 import { getServiceImage, handleImageError, getHeroImage } from '../../utils/imageUtils'
 import SEO from '../components/SEO'
 import { generateTitle, generateDescription, generateKeywords, getLocalBusinessSchema } from '../../utils/seoUtils'
 
 const Home = () => {
-  const featuredServices = getFeaturedServices()
+  const servicesInOrder = getServicesInOrder()
 
   return (
     <div className="bg-white">
@@ -36,12 +36,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Couverture, étanchéité & services
+              Etanchéité, couverture et services.
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Votre toiture, notre responsabilité.
-              <br />
-              Travaux de couverture et d'étanchéité réalisés avec exigence et durabilité. Intervention dans le sud ouest.
+              Notre expérience, nos solutions au service de votre toiture. Intervention dans le sud ouest
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -62,7 +60,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services mis en avant */}
+      {/* Nos services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -70,11 +68,11 @@ const Home = () => {
               Nos services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Des solutions complètes pour tous vos besoins en toiture, couverture et étanchéité en Gironde, Charente-Maritime, Haute-Garonne et Sud-Ouest. Expert couvreur professionnel depuis 2017.
+              Aquitaine Toitures Professionnelles intervient pour votre étanchéité, votre couverture, votre toit terrasse, dans le strict respect des règles de l'art. Nos travaux sont réalisés avec une solide couverture d'assurance décennale, et chaque intervention donne lieu à des rapports formalisés et circonstanciés garantissant rigueur, transparence et traçabilité.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {featuredServices.map((service) => (
+            {servicesInOrder.slice(0, 6).map((service) => (
               <Link
                 key={service.id}
                 to={`/services/${service.slug}#ce-que-nous-faisons`}
@@ -320,11 +318,11 @@ const Home = () => {
               Zones d'intervention
             </h2>
             <p className="text-lg text-gray-600">
-              Nous intervenons dans tout le Sud-Ouest
+              Nous intervenons en Nouvelle-Aquitaine et en Occitanie
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Gironde (33)', 'Charente-Maritime (17)', 'Haute-Garonne (31)', 'Sud-Ouest'].map((zone) => (
+            {['Nouvelle Aquitaine', 'Occitanie'].map((zone) => (
               <div
                 key={zone}
                 className="bg-white border-2 border-gray-200 px-6 py-3 rounded-md flex items-center space-x-2"

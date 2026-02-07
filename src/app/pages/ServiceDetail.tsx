@@ -63,20 +63,13 @@ const ServiceDetail = () => {
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="py-12 bg-[#F9FAFB]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-gray-700 leading-relaxed">{service.intro}</p>
-        </div>
-      </section>
-
       {/* Ce que nous faisons - Design amélioré */}
       <section id="ce-que-nous-faisons" className="py-20 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-4">Ce que nous faisons</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Des solutions professionnelles adaptées à vos besoins spécifiques en Gironde, Charente-Maritime, Haute-Garonne et Sud-Ouest. Expert {service.category.toLowerCase()} depuis 2017.
+              {service.intro}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

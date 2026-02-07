@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { services, ServiceCategory, getServicesByCategory } from '../../data/servicesData'
+import { ServiceCategory, getServicesInOrder, getServicesByCategory } from '../../data/servicesData'
 import { getServiceImage, handleImageError, getCategoryPlaceholder } from '../../utils/imageUtils'
 import SEO from '../components/SEO'
 import { generateTitle, generateDescription, generateKeywords } from '../../utils/seoUtils'
@@ -18,7 +18,7 @@ const Services = () => {
   ]
 
   const filteredServices = selectedCategory === 'Tous' 
-    ? services 
+    ? getServicesInOrder() 
     : getServicesByCategory(selectedCategory)
 
   return (

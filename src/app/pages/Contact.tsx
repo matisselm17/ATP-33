@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react'
 import { Phone, Mail, MapPin, CheckCircle, AlertCircle } from 'lucide-react'
-import { services } from '../../data/servicesData'
+import { getServicesInOrder } from '../../data/servicesData'
 import SEO from '../components/SEO'
 import { generateTitle, generateDescription, generateKeywords } from '../../utils/seoUtils'
 
@@ -250,7 +250,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-md focus:border-[#FF6B00] focus:outline-none transition-colors"
                   >
                     <option value="">Sélectionnez un service</option>
-                    {services.map((service) => (
+                    {getServicesInOrder().map((service) => (
                       <option key={service.id} value={service.title}>
                         {service.title}
                       </option>

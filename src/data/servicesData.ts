@@ -28,7 +28,7 @@ export const services: Service[] = [
     category: 'Interventions spécifiques',
     excerpt: 'Interventions sécurisées sur toitures complexes et zones d\'accès difficile.',
     heroTitle: 'Interventions sur toitures en accès difficile',
-    intro: 'Les toitures complexes, hautes ou à forte pente nécessitent des techniques spécifiques et une sécurisation rigoureuse. Nous intervenons sur tous types de configurations difficiles d\'accès, en garantissant la sécurité des équipes et la qualité de l\'intervention.',
+    intro: 'Nous intervenons sur les toitures difficiles d\'accès grâce à l\'utilisation de nacelles et de systèmes de levage adaptés. Ces équipements nous permettent de réaliser les travaux en toute sécurité et avec efficacité, même dans les zones les plus compliquées.',
     whatWeDo: [
       'Diagnostic sécurisé des zones d\'accès difficile',
       'Mise en place de dispositifs de sécurité adaptés',
@@ -68,7 +68,7 @@ export const services: Service[] = [
     category: 'Couverture & zinguerie',
     excerpt: 'Pose de fenêtres de toit et puits de lumière pour plus de luminosité.',
     heroTitle: 'Apport en lumière : fenêtres de toit et puits de lumière',
-    intro: 'Améliorer la luminosité naturelle d\'un espace nécessite une expertise en couverture et étanchéité. Nous installons fenêtres de toit et puits de lumière avec des raccords étanches et une intégration harmonieuse à votre couverture existante.',
+    intro: 'Nous réalisons l\'installation et le remplacement de solutions d\'apport en lumière, telles que voûtes filantes, lanterneaux, panneaux translucides ou fenêtres de toit. Chaque intervention est adaptée à la configuration du bâtiment pour optimiser la luminosité naturelle tout en assurant l\'étanchéité et la durabilité des ouvrages.',
     whatWeDo: [
       'Pose de fenêtres de toit toutes dimensions',
       'Installation de puits de lumière',
@@ -108,7 +108,7 @@ export const services: Service[] = [
     category: 'Couverture & zinguerie',
     excerpt: 'Pose, réparation et rénovation de toitures en tous matériaux.',
     heroTitle: 'Couverture : expertise en tous matériaux',
-    intro: 'De la pose neuve à la rénovation complète, nous maîtrisons tous les matériaux de couverture : tuiles, ardoises, zinc, bac acier, shingle. Notre savoir-faire couvre la toiture dans son ensemble, des supports aux finitions.',
+    intro: 'Nous réalisons les travaux de couverture en bac acier, panneaux sandwich ou tuiles, en neuf comme en rénovation. Nos solutions sont adaptées aux contraintes techniques et esthétiques de chaque ouvrage. Les interventions sont menées dans le respect des règles de l\'art afin d\'assurer la solidité et la durabilité de la toiture.',
     whatWeDo: [
       'Pose de couverture neuve tous matériaux',
       'Rénovation et réparation de toitures',
@@ -149,7 +149,7 @@ export const services: Service[] = [
     category: 'Couverture & zinguerie',
     excerpt: 'Reprise de couverture après retrait d\'amiante, en conformité.',
     heroTitle: 'Reprise de couverture après désamiantage',
-    intro: 'Après un désamiantage, la reprise de couverture doit être réalisée dans le respect des normes et en garantissant une étanchéité parfaite. Nous intervenons pour remettre en état votre toiture après retrait d\'amiante, avec toutes les précautions nécessaires.',
+    intro: 'Nous assurons la remise en état et la pose de couverture après désamiantage, en remplaçant les matériaux retirés par des solutions sûres et durables. Nos interventions respectent les contraintes techniques et sécuritaires propres à ce type de chantier.',
     whatWeDo: [
       'Remise en état complète de la couverture',
       'Respect des normes post-désamiantage',
@@ -189,7 +189,7 @@ export const services: Service[] = [
     category: 'Diagnostic & entretien',
     excerpt: 'Contrôle, nettoyage et maintenance préventive de votre toiture.',
     heroTitle: 'Entretien et maintenance préventive de toiture',
-    intro: 'Un entretien régulier prolonge la durée de vie de votre toiture et évite les interventions coûteuses. Nous réalisons des contrôles complets, du nettoyage raisonné et des interventions préventives sur tous les points sensibles.',
+    intro: 'Nous assurons l\'entretien et la maintenance des toitures, terrasses et ouvrages d\'étanchéité pour prévenir les dégradations et prolonger leur durée de vie. Chaque intervention est réalisée avec soin et selon les méthodes adaptées à chaque type de support.',
     whatWeDo: [
       'Contrôle visuel complet de la toiture',
       'Vérification des points sensibles',
@@ -230,7 +230,7 @@ export const services: Service[] = [
     category: 'Étanchéité',
     excerpt: 'Solutions d\'étanchéité en membranes liquides pour terrasses et toitures.',
     heroTitle: 'Étanchéité liquide : solutions durables',
-    intro: 'Les membranes d\'étanchéité liquide offrent une excellente adhérence et s\'adaptent aux formes complexes. Idéales pour terrasses, balcons et toitures plates, elles assurent une étanchéité continue et durable.',
+    intro: 'Nous réalisons des systèmes d\'étanchéité liquide adaptés aux surfaces complexes, aux relevés et aux ouvrages nécessitant une solution continue sans joints. Cette technique permet une protection fiable et durable tout en s\'adaptant aux contraintes de chaque support. Nos interventions sont menées dans le respect des règles de l\'art afin d\'assurer la performance des ouvrages.',
     whatWeDo: [
       'Application de membranes liquides SEL',
       'Traitement des points singuliers',
@@ -271,7 +271,7 @@ export const services: Service[] = [
     category: 'Diagnostic & entretien',
     excerpt: 'Diagnostic et intervention sur toitures difficiles d\'accès.',
     heroTitle: 'Diagnostic et intervention sur étanchéité inaccessible',
-    intro: 'Certaines toitures sont difficiles d\'accès pour un diagnostic classique. Nous utilisons des méthodes adaptées, notamment la photographie détaillée et l\'inspection par drone si nécessaire, pour identifier précisément les problèmes et proposer des solutions adaptées.',
+    intro: 'Nous réalisons des travaux d\'étanchéité sur toitures et zones inaccessibles en apportant des solutions adaptées à chaque support. Nos interventions sont menées dans le respect des règles de l\'art afin de garantir la fiabilité et la durabilité des ouvrages.',
     whatWeDo: [
       'Pré-diagnostic par photographie détaillée',
       'Inspection visuelle sécurisée',
@@ -312,7 +312,7 @@ export const services: Service[] = [
     category: 'Couverture & zinguerie',
     excerpt: 'Sarking et isolation performante par l\'extérieur pour plus de confort.',
     heroTitle: 'Isolation de toiture par l\'extérieur (sarking)',
-    intro: 'L\'isolation par l\'extérieur offre de nombreux avantages : meilleure performance thermique, confort été comme hiver, pas de perte d\'espace habitable. Le sarking, technique d\'isolation sous couverture, est particulièrement adapté en rénovation comme en construction neuve.',
+    intro: 'Nous réalisons l\'isolation des toitures par l\'extérieur pour améliorer le confort thermique et réduire les pertes d\'énergie. Nos solutions sont adaptées à chaque type de toiture afin d\'assurer efficacité, durabilité et performance énergétique.',
     whatWeDo: [
       'Isolation par sarking (sous couverture)',
       'Pose de membranes isolantes performantes',
@@ -353,7 +353,7 @@ export const services: Service[] = [
     category: 'Interventions spécifiques',
     excerpt: 'Travaux soignés sur bâti ancien et patrimoine architectural.',
     heroTitle: 'Travaux sur bâti ancien et patrimoine',
-    intro: 'Les bâtiments anciens et le patrimoine architectural nécessitent une approche respectueuse des techniques et matériaux d\'origine. Nous intervenons avec savoir-faire sur ces ouvrages, en préservant leur caractère tout en assurant étanchéité et pérennité.',
+    intro: 'Nous intervenons sur des bâtiments anciens et patrimoniaux, tels que des églises, châteaux ou monuments historiques. Nos équipes mettent leur savoir-faire au service de la restauration et de la conservation, en adaptant les techniques et matériaux pour préserver l\'intégrité et l\'authenticité des ouvrages.',
     whatWeDo: [
       'Travaux respectueux des techniques anciennes',
       'Utilisation de matériaux traditionnels',
@@ -435,7 +435,7 @@ export const services: Service[] = [
     category: 'Étanchéité',
     excerpt: 'Reprises ciblées et réparations d\'étanchéité défaillante.',
     heroTitle: 'Réparation et reprise d\'étanchéité',
-    intro: 'Les défauts d\'étanchéité nécessitent des interventions ciblées et durables. Nous réalisons des reprises localisées sur solins, relevés, joints et zones dégradées, avec des techniques adaptées à chaque matériau et situation.',
+    intro: 'Nous réalisons les réparations et reprises d\'étanchéité sur tous types de toitures et ouvrages afin de corriger les infiltrations et renforcer la protection. Nos interventions sont adaptées à chaque situation et menées dans le respect des règles de l\'art pour garantir la durabilité et la fiabilité des ouvrages.',
     whatWeDo: [
       'Reprise de solins et relevés',
       'Réparation de joints défaillants',
@@ -476,7 +476,7 @@ export const services: Service[] = [
     category: 'Interventions spécifiques',
     excerpt: 'Solutions d\'accès et sécurisation pour toitures et zones en hauteur.',
     heroTitle: 'Sécurisation de toiture et accès sécurisés',
-    intro: 'L\'accès et le travail sur toiture nécessitent des dispositifs de sécurisation adaptés. Nous installons et utilisons des solutions d\'accès sécurisées, respectant les normes de sécurité en hauteur, pour toutes interventions et maintenances.',
+    intro: 'Nous réalisons l\'installation de dispositifs de sécurisation de toiture tels que les échelles à crinoline, lignes de vie, points d\'ancrage ou sauts de loup. Chaque solution est adaptée à la configuration du bâtiment pour garantir la sécurité des interventions et la protection des personnes.',
     whatWeDo: [
       'Installation de dispositifs d\'accès sécurisés',
       'Mise en place d\'équipements de protection',
@@ -517,7 +517,7 @@ export const services: Service[] = [
     category: 'Étanchéité',
     excerpt: 'Étanchéité complète de terrasses accessibles avec revêtements adaptés.',
     heroTitle: 'Étanchéité de terrasses accessibles',
-    intro: 'Les terrasses accessibles nécessitent une étanchéité particulièrement performante et des revêtements adaptés à la circulation. Nous réalisons l\'étanchéité complète avec évacuations, relevés, protections et finitions adaptées à l\'usage.',
+    intro: 'Nous réalisons les travaux d\'étanchéité sur toitures accessibles, terrasses et balcons, avec des solutions adaptées à chaque configuration. Nous assurons également la pose de dalles ou de lames sur plots pour la création de surfaces de circulation durables et esthétiques. Nos interventions sont menées dans le respect des règles de l\'art afin de garantir la fiabilité et la longévité des ouvrages.',
     whatWeDo: [
       'Étanchéité complète de terrasses',
       'Traitement des évacuations et relevés',
@@ -558,7 +558,7 @@ export const services: Service[] = [
     category: 'Interventions spécifiques',
     excerpt: 'Solutions sur-mesure pour projets complexes et cas particuliers.',
     heroTitle: 'Travaux spéciaux et sur-mesure',
-    intro: 'Certains projets nécessitent des solutions adaptées et un savoir-faire spécifique. Nous intervenons sur des cas complexes, des contraintes particulières et des projets sur-mesure, en apportant des solutions techniques appropriées.',
+    intro: 'Nous réalisons des travaux spéciaux sur mesure, adaptés aux besoins particuliers de chaque chantier. Qu\'il s\'agisse de configurations techniques complexes ou de contraintes spécifiques, nos équipes mettent en œuvre des solutions fiables et adaptées pour garantir la réussite de chaque projet.',
     whatWeDo: [
       'Étude de cas complexes',
       'Solutions sur-mesure adaptées',
@@ -599,7 +599,7 @@ export const services: Service[] = [
     category: 'Couverture & zinguerie',
     excerpt: 'Pose et réparation de zinguerie : gouttières, chéneaux, noues, solins.',
     heroTitle: 'Zinguerie : finitions et évacuation des eaux',
-    intro: 'La zinguerie assure l\'étanchéité des points singuliers et l\'évacuation efficace des eaux de pluie. Nous réalisons tous travaux de zinguerie : gouttières, chéneaux, noues, solins, relevés, avec un savoir-faire précis et des finitions soignées.',
+    intro: 'Nous réalisons les travaux de zinguerie nécessaires à la bonne évacuation des eaux pluviales et à la protection des ouvrages : gouttières, chéneaux, habillages et finitions. Nos interventions sont adaptées à chaque configuration et menées dans le respect des règles de l\'art afin d\'assurer la durabilité de l\'ensemble.',
     whatWeDo: [
       'Pose et réparation de gouttières',
       'Fabrication et pose de chéneaux',
@@ -634,14 +634,40 @@ export const services: Service[] = [
   }
 ]
 
+/** Ordre d'affichage des services (page liste) */
+const SERVICES_DISPLAY_ORDER: string[] = [
+  'etancheite-inaccessible',
+  'etancheite-terrasses-accessibles',
+  'couverture',
+  'zinguerie',
+  'etancheite-liquide',
+  'recherche-fuite',
+  'reparation-reprise-etancheite',
+  'entretien-toiture',
+  'apport-en-lumiere',
+  'securisation-toiture',
+  'acces-difficile',
+  'isolation-toiture-exterieure',
+  'patrimoine',
+  'travaux-speciaux',
+  'couverture-apres-desamiantage'
+]
+
 export const getServiceBySlug = (slug: string): Service | undefined => {
   return services.find(service => service.slug === slug)
 }
 
+/** Retourne les services dans l'ordre d'affichage demandé */
+export const getServicesInOrder = (): Service[] => {
+  return [...services].sort(
+    (a, b) => SERVICES_DISPLAY_ORDER.indexOf(a.slug) - SERVICES_DISPLAY_ORDER.indexOf(b.slug)
+  )
+}
+
 export const getServicesByCategory = (category: ServiceCategory): Service[] => {
-  return services.filter(service => service.category === category)
+  return getServicesInOrder().filter(service => service.category === category)
 }
 
 export const getFeaturedServices = (): Service[] => {
-  return services.filter(service => service.featured)
+  return getServicesInOrder().filter(service => service.featured)
 }
