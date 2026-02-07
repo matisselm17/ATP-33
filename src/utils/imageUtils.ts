@@ -31,7 +31,7 @@ export const getServiceImage = (folderName: string): string => {
     'isolationtoitureparlextrieur': '/isolationtoitureparlextrieur/2025-02-24-15-35-51-860.jpeg',
     'patrimoine': '/patrimoine/IMG_9478.jpeg',
     'recherchedefuite': '/recherchedefuite/atypix-soprema-entreprises-soprassistance-vannes-08-web-1024x683.jpg',
-    'rparationetreprisedtanchit': '/rparationetreprisedtanchit/IMG_9552.jpeg',
+    'rparationetreprisedtanchit': '/rparationetreprisedtanchit/reprise-etancheite.jpg',
     'scurisationdetoiture': '/scurisationdetoiture/Saut de loup 5.jpeg',
     'tanchitterrassesaccessibles': '/tanchitterrassesaccessibles/B79568AB-5FF3-4523-89DC-B3EF19257C66.jpeg',
     'travauxspciaux': '/travauxspciaux/IMG_1130.jpeg',
